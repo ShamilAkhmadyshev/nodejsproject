@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "mongoUri":"mongodb+srv://zedkan715:test1234@nodejs.33mit.mongodb.net/?retryWrites=true&w=majority&appName=NodeJS",
+  "accessKey": "secret access key",
+  "refreshKey": "secret refresh key"
+}
