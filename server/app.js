@@ -15,7 +15,6 @@ app.use(cors())
 app.use("/api", router)
 
 if(process.env.NODE_ENV === "production"){
-    console.log("Production")
     app.use("/", express.static(path.join(__dirname, "client")))
     const indexPath = path.join(__dirname, "client", "index.html")
     app.get("*", (req, res) =>{

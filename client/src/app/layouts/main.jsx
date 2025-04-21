@@ -1,15 +1,15 @@
 import React from "react";
 import useMockData from "../utils/mockData";
-
+import history from "../utils/history";
 const Main = () => {
-    const { error, initialize, progress, status } = useMockData();
+    const { error, progress, status } = useMockData();
     const handleClick = () => {
-        initialize();
+        history.push("/login");
     };
     return (
         <div className="container mt-5">
             <h1> Main Page</h1>
-            <h3>Инициализация данных в FireBase</h3>
+            <h3>Добро пожаловать в систему знакомств</h3>
             <ul>
                 <li>Status:{status}</li>
                 <li>Progress: {progress}%</li>
@@ -17,7 +17,7 @@ const Main = () => {
             </ul>
             <button className="btn btn-primary" onClick={handleClick}>
                 {" "}
-                Инициализировать
+                Войти
             </button>
         </div>
     );
